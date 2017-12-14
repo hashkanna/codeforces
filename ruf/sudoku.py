@@ -20,8 +20,6 @@ def box(input,i,j):
             elems.append(input[ii][jj])
     return elems
 
-print(box(input,2,5))
-
 choices = input[:]
 choices_transpose = list(zip(*choices)) # for columnwise checks
 
@@ -32,7 +30,7 @@ for i in range(9):
             choices[i][j]=[x for x in range(1,10) if x not in choices[i] and x not in choices_transpose[j] and x not in box(choices,i,j)]
             if len(choices[i][j])==1:
                 choices[i][j]=choices[i][j][0]
-print(choices)
+# print(choices)
 
 while any(isinstance(choices[i][j], list) for i in range(9) for j in range(9)):
     for i in range(9):
