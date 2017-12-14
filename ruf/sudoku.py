@@ -26,7 +26,6 @@ choices_transpose = list(zip(*choices)) # for columnwise checks
 for i in range(9):
     for j in range(9):
         if input[i][j]==0:
-            # choices[i][j]=[x for x in range(1,10) if x not in input[i] and x not in input_transpose[j] and x not in box(input,i,j)]
             choices[i][j]=[x for x in range(1,10) if x not in choices[i] and x not in choices_transpose[j] and x not in box(choices,i,j)]
             if len(choices[i][j])==1:
                 choices[i][j]=choices[i][j][0]
@@ -36,7 +35,6 @@ while any(isinstance(choices[i][j], list) for i in range(9) for j in range(9)):
     for i in range(9):
         for j in range(9):
             if isinstance(choices[i][j], list):
-                # choices[i][j]=[x for x in range(1,10) if x not in input[i] and x not in input_transpose[j] and x not in box(input,i,j)]
                 choices[i][j]=[x for x in range(1,10) if x not in choices[i] and x not in choices_transpose[j] and x not in box(choices,i,j)]
                 if len(choices[i][j])==1:
                     choices[i][j]=choices[i][j][0]
