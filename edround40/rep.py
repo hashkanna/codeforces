@@ -6,10 +6,12 @@ def rep(n,s):
         return(n)
     else:
         for i in range(n//2,0,-1):
-            for j in range(n-i-i+1):
-                if s[j:j+i] == s[j+i:j+i+i]:
-                    # print(s[j:j+i])
-                    return n-i+1
+            # for j in range(n-i-i+1):
+            # print(i)
+            if s[:i] == s[i:i+i]:
+                # print(s[j:j+i])
+                # print(i)
+                return n-i+1
         return n
 print(rep(n,s))
 

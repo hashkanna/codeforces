@@ -61,6 +61,10 @@ else:
             flag=False
             break
 
+if n==1:
+    x=1
+    y=a[0]
+    flag=True
 if flag==False:
     print('NO')
 else:
