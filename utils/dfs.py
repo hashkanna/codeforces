@@ -29,6 +29,7 @@ tin=[-1]*n
 tout=[-1]*n
 parents=[-1]*n
 timer=0
+cycle=False
 dfs(0,0)
 for i in g:
     print(i, tin[i],tout[i])
