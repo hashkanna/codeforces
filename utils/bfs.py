@@ -2,7 +2,7 @@ from collections import defaultdict
 from collections import deque
 
 def bfs(u,p):
-    
+    q.append(u)
 
 g=defaultdict(list)
 g[0]=[1,2]
