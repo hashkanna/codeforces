@@ -1,0 +1,5 @@
+Fermat's Little Theorem
+
+(a power b) mod c
+
+Euler Function

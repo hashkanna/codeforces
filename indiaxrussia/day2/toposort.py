@@ -47,8 +47,8 @@ for i in range(n):
 # dfs(0,0)
 # cc_size=Counter(cc)
 # print(*[cc_size[cc[i]] for i in range(n)])
-# for i in range(n):
-#     print(i, tin[i],tout[i])
+for i in range(n):
+    print(i, tin[i],tout[i])
 # print(tout)
 # for ind,num in enumerate(sorted(tout)):
 #     print(ind, end=' ')
@@ -56,4 +56,5 @@ if cycle==True:
     print('NO')
 else:
     print('YES')
+    print(*tout)
     print(*[i[0] for i in sorted(enumerate(tout), key=lambda x:-x[1])])
