@@ -1,0 +1,13 @@
+in C++ use long double which has higher precision
+
+use std::pair in C++ to represent points. it has inbuilt functions for various operations. so it is better to use it instead of manually constructing a struct and adding new functions to it.
+
+dot product applications
+segment AB. point P.
+
+cross product applications.
+check if a polygon is convex
+https://stackoverflow.com/questions/471962/how-do-i-efficiently-determine-if-a-polygon-is-convex-non-convex-or-complex
+
+area of triangle using cross product
+https://www.youtube.com/watch?v=QHaAoQQy07I
