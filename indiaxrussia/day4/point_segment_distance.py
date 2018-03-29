@@ -1,11 +1,40 @@
+import math
 l=list(map(int, input().split(' ')))
 c=l[:2]
 a=l[2:4]
 b=l[4:6]
 
-def dot_product(a,b,c):
-    
 
+def dot_product(a,b,c):
+    ab=[b[0]-a[0],b[1]-a[1]]
+    bc=[c[0]-b[0],c[1]-b[1]]
+    # print(ab,bc)
+    return ab[0]*bc[0] + ab[1]*bc[1]
+
+def cross_product(a,b,c):
+    ab=[b[0]-a[0],b[1]-a[1]]
+    ac=[c[0]-a[0],c[1]-a[1]]
+    return (ab[0]*ac[1]) - (ab[1] * ac[0])
+
+def dist(a,b):
+    d1 = a[0] - b[0]
+    d2 = a[1] - b[1]
+    return 0.000000000001 + math.sqrt(d1*d1+d2*d2)
+
+res = cross_product(a,b,c) / dist(a,b)
+dot1 = dot_product(a,b,c)
+if (dot1 > 0):
+    res=dist(b,c)
+dot2 = dot_product(b,a,c)
+if (dot2 > 0):
+    res=dist(a,c)
+
+print('%.5f' % abs(res))
+
+
+# res = cross_product(a,b,c) / dist(a,b)
+
+# print('%.5f'%res)
 
 
 # //Compute the dot product AB ⋅ BC

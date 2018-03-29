@@ -20,7 +20,18 @@ def norm(xx):
 def dot_product(a,b):
     return sum(map(mul, a, b))
 
-# X = [x[0]-y[0], x[1]-y[1]]
+AB = [y[0]-x[0], y[1]-x[1]]
+CB = [y[0]-z[0], y[1]-z[1]]
+A=dot_product(AB,CB)
+
+BC = [z[0]-y[0], z[1]-y[1]]
+AC = [z[0]-x[0], z[1]-x[1]]
+B=dot_product(BC,AC)
+
+CA = [x[0]-z[0], x[1]-z[1]]
+BA = [x[0]-y[0], x[1]-y[1]]
+C=dot_product(CA,BA)
+
 # Y = [y[0]-z[0], y[1]-z[1]]
 # Z = [z[0]-x[0], z[1]-x[1]]
 # A=dot_product([x[0]-y[0],x[1]-y[1]])
@@ -30,18 +41,18 @@ def dot_product(a,b):
 # B=dot_product(Y,Z)
 # C=dot_product(Z,X)
 
-A=dot_product(x,y)
-B=dot_product(y,z)
-C=dot_product(z,x)
+# A=dot_product(x,y)
+# B=dot_product(y,z)
+# C=dot_product(z,x)
 
 # print(A,B,C)
 
 if A<0 or B<0 or C<0:
     print('OBTUSE')
-elif A>0 and B>0 and C>0:
-    print('ACUTE')
-else:
+elif A==0 or B==0 or C==0:
     print('RIGHT')
+else:
+    print('ACUTE')
 
 # A = (sum(map(mul, x, y))) / (eps+(norm(x)*norm(y)))
 # B = (sum(map(mul, x, z))) / (eps+(norm(x)*norm(z)))
