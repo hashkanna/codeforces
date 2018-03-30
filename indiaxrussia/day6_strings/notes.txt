@@ -1,0 +1,2 @@
+preprocess text + pattern = (z-function, prefix function)
+preprocess pattern = (suffix tree, suffix array, suffix automaton)
