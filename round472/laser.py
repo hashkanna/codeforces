@@ -13,11 +13,8 @@ max_val=-1
 for i in range(n-2):
     x = a[i]+U
     val1 = max_eligible(a,x)
-
     if val1!=-1 and val1!=a[i+1] and val1!=a[i]:
-        # print('hi')
         val = (val1-a[i+1]) / (val1-a[i])
-        # print(val)
         max_val=max(max_val,val)
     # print(a[i],a[i+1],val1,max_val)
 print(max_val)
