@@ -24,7 +24,7 @@ elif k%2==0:
     print_res(res)
 elif k<(n-2):
     print("YES")
-    res[1]=['.']+['#'*(k)]+['.'*(n-k-1)]
+    res[1]=['.'*((n-k)//2)]+['#'*(k)]+['.'*((n-k)//2)]
     print_res(res)
 elif k>(n-2):
      print("YES")
